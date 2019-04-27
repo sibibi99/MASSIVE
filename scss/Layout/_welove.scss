@@ -1,0 +1,70 @@
+.welove {
+  padding: 100px 0;
+  .welove__title {
+    text-align: center;
+    position: relative;
+    h1 {
+      &::after {
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        width: 60px;
+        height: 2px;
+        margin-left: -31px;
+        content: "";
+        background: #595959;
+      }
+      @include text($color-black-0, $fs-3, $fw-normal);
+    }
+    p {
+      @include text($color-black-1, $fs-0, $fw-normal);
+      width: 60%;
+      margin: 0 auto;
+      padding-top: $pd-2;
+    }
+  }
+  .welove__content {
+    margin-top: 100px;
+      .col-md-4{
+          padding: 0 30px;
+      }
+      .welove__item{
+        position: relative;
+        padding: 30px;
+        border: 1px solid #e9e9e9;
+        border-radius: 4px;
+        &:hover{
+          .icon{
+            background: $color-yellow;
+          }
+        }
+      }
+      .icon{
+        position: absolute;
+        top: -30px;
+        left: 30px;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        border-radius: 4px;
+        background: #222;
+        box-shadow: 0 0 0 10px #fff;
+        line-height: 60px;
+        color: white;
+        i{
+            font-size: $fs-3 +5;
+            line-height: 60px;
+        }
+      }
+    h2 {
+      @include text($color-black-0, $fs-2, $fw-normal);
+      padding-top: $pd-2;
+    }
+    p {
+        @include text($color-black-1, $fs-0, $fw-normal);
+        text-align: left;
+        width: 70%;
+        padding-top: $pd-2;
+      }
+  }
+}

@@ -1,0 +1,86 @@
+.skill {
+  background: url(../img/para.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  color: white;
+  .container-fluid{
+    padding: 0 !important;
+
+  }
+  h1 {
+    @include text($color-white-0, $fs-3, $fw-normal);
+  }
+  .left {
+    display: table;
+    width: 100%;
+    height: 400px;
+    vertical-align: middle;
+    h1 {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+      letter-spacing: 6px;
+    }
+  }
+  .right {
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .myProgress {
+      margin: 50px 0;
+      .progress {
+        border-radius: 0px;
+        background-color: $color-black-1;
+        .progress-bar {
+          background-color: $color-white-0;
+          color: $color-black-0;
+          text-align: left;
+          padding-left: 10px;
+          position: absolute;
+          span {
+            position: absolute;
+            top: -28px;
+            right: -5px;
+            display: inline-block;
+            min-width: 25px;
+            height: 19px;
+            padding: 0 8px;
+            text-align: center;
+            letter-spacing: 0;
+            color: #fff;
+            border-radius: 30px;
+            background-color: rgb(148, 144, 144);
+            line-height: 20px;
+            &::before {
+              position: absolute;
+              bottom: -2px;
+              left: 15px;
+              display: block;
+              width: 5px;
+              height: 5px;
+              content: "";
+              -webkit-transform: rotate(45deg);
+              -moz-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+              border-style: none;
+              border-color: rgb(148, 144, 144);
+              border-right: 1px solid rgb(148, 144, 144);
+              -o-border-image: none;
+              border-image: none;
+              background-color: rgb(148, 144, 144);
+            }
+          }
+        }
+      }
+    }
+  }
+}
